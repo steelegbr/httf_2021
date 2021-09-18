@@ -11,6 +11,7 @@ audio_config = AudioOutputConfig(use_default_speaker=True)
 speech_recogniser = SpeechRecognizer(speech_config)
 synthesizer = SpeechSynthesizer(speech_config=speech_config, audio_config=audio_config)
 
+
 def convert_speech_to_text() -> str:
     result = speech_recogniser.recognize_once_async().get()
 
